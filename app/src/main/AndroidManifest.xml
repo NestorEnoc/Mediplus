@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mediplus"
+        tools:targetApi="31">
+        <activity
+            android:name=".HistorialModuloCitas"
+            android:exported="false" />
+        <activity
+            android:name=".VerInfoModuloCitas"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionArchivoCita"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEliminacionRecordatorioCita"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEdicionCitas"
+            android:exported="false" />
+        <activity
+            android:name=".EditarModuloCitas"
+            android:exported="false" />
+        <activity
+            android:name=".CrearModuloCitas"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionRecordatorioCitas"
+            android:exported="false" />
+        <activity
+            android:name=".HistorialModuloExamenes"
+            android:exported="false" />
+        <activity
+            android:name=".HistorialModuloGestionSalud"
+            android:exported="false" />
+        <activity
+            android:name=".HistorialModuloAbastecimiento"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEliminacionRecordatorioNotaGeneral"
+            android:exported="false" />
+        <activity
+            android:name=".VerInfoModuloNotasGenerales"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEdicionRecordatorioNotaGeneral"
+            android:exported="false" />
+        <activity
+            android:name=".EditarModuloNotasGenerales"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionRecordatorioNotasGenerales"
+            android:exported="false" />
+        <activity
+            android:name=".CrearModuloNotasGenerales"
+            android:exported="false" />
+        <activity
+            android:name=".ModuloNotasGenerales"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".VerInfoModuloNotasMedicamentos"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEdicionRecordatorioNotaMedicamento"
+            android:exported="false" />
+        <activity
+            android:name=".EditarModuloNotasMedicamentos"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEliminacionRecordatorioNotaMedicamento"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionRecordatorioNotasMedicamento"
+            android:exported="false" />
+        <activity
+            android:name=".CrearModuloNotasMedicamentos"
+            android:exported="false" />
+        <activity
+            android:name=".ModuloNotasMedicamentos"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ConfirmacionEliminacionRecordatorioAbastecimiento"
+            android:exported="false" />
+        <activity
+            android:name=".VerInfoModuloAbastecimiento"
+            android:exported="false" />
+        <activity
+            android:name=".FiltrarModuloExamenes"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEdicionExamen"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionArchivoExamen"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEliminacionRecordatorioExamen"
+            android:exported="false" />
+        <activity
+            android:name=".VerInfoModuloExamenes"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionRecordatorioExamen"
+            android:exported="false" />
+        <activity
+            android:name=".EditarModuloExamenes"
+            android:exported="false" />
+        <activity
+            android:name=".CrearModuloExamenes"
+            android:exported="false" />
+        <activity
+            android:name=".ModuloExamenes"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ConfirmacionArchivoAbastecimientoMedicamento"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionAbastecimientoMedicamento"
+            android:exported="false" />
+        <activity
+            android:name=".ReabastecerMedicamentos"
+            android:exported="false" />
+        <activity
+            android:name=".CrearModuloAbastecimiento"
+            android:exported="false" />
+        <activity
+            android:name=".ModuloAlertaAbastecimiento"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ConfirmacionArchivoGestionSalud"
+            android:exported="false" />
+        <activity
+            android:name=".VerInfoModuloGestionSalud"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEliminacionRecordatorioGestionSalud"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEdicionGestionSalud"
+            android:exported="false" />
+        <activity
+            android:name=".EditarModuloGestionSalud"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionRecordatorioGestionSalud"
+            android:exported="false" />
+        <activity
+            android:name=".CrearModuloGestionSalud"
+            android:exported="false" />
+        <activity
+            android:name=".ModuloGestionSalud"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".HistorialModuloVidaSaludable"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionArchivoVidaSaludable"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEdicionVidaSaludable"
+            android:exported="false" />
+        <activity
+            android:name=".VerInfoModuloVidaSaludable"
+            android:exported="false" />
+        <activity
+            android:name=".HistorialModuloMedicamentos"
+            android:exported="false" />
+        <activity
+            android:name=".ModuloHistoriales"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionArchivoRecordatorioMedicamento"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionRecordatorioVidaSaludable"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEliminacionRecordatorioVidaSaludable"
+            android:exported="false" />
+        <activity
+            android:name=".EditarModuloVidaSaludable"
+            android:exported="false" />
+        <activity
+            android:name=".CrearModuloVidaSaludable"
+            android:exported="false" />
+        <activity
+            android:name=".ModuloVidaSaludable"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ConfirmacionEliminacionRecordatorioMedicamento"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionEdicionRecordatorioMedicamento"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionRecordatorioMedicamento"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionUsuarioActualizado"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionUsuarioCreado"
+            android:exported="false"
+            android:theme="@style/color_barra" />
+        <activity
+            android:name=".EditarModuloMedicamentos"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".VerInfoModuloMedicamentos"
+            android:exported="false" />
+        <activity
+            android:name=".CrearModuloMedicamentos"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ModuloCitas"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ModuloMedicamentos"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Editar_perfil"
+            android:exported="false" />
+        <activity
+            android:name=".Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".Registrarse"
+            android:exported="false" /> <!-- Configurar SplashActivity como la actividad principal -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".inicio_sesion.Login"
+            android:exported="false"
+            android:theme="@style/color_barra" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+    </application>
+
+</manifest>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Fondo con sombra -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#D0CECE" /> <!-- Color de la tarjeta -->
+            <corners android:radius="25dp" />
+        </shape>
+    </item>
+
+    <!-- Sombra personalizada en la parte inferior -->
+    <item android:bottom="5dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/white"
+                android:endColor="@color/white"
+                android:angle="270"/>
+            <corners android:radius="25dp"/>
+        </shape>
+    </item>
+
+    <!-- Borde rojo redondeado -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/> <!-- Fondo transparente para solo mostrar el borde -->
+            <stroke
+                android:width="4dp"
+            android:color="@color/rojo"/>
+            <corners android:radius="25dp"/> <!-- Misma radiación que el fondo -->
+        </shape>
+    </item>
+
+</layer-list>

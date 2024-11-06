@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    tools:context=".EditarModuloGestionSalud">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_layout"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent">
+
+        <fragment
+            android:id="@+id/fragment_container"
+            android:name="com.example.mediplus.BarTopReturn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintTop_toBottomOf="@id/top_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <!-- Other content in the scrollable area -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- Título de la pantalla -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="163dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Gestión de salud"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Texto descriptivo -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/textView120"
+                            android:layout_width="301dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Cambia la información del recordatorio de gestión de salud para editarlo correctamente." />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical">
+
+
+                        <!-- -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginBottom="16dp">
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enfermedad a cuidar"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <!--<EditText
+                                android:id="@+id/editTextText999"
+                                style="@style/Style_input"
+                                android:hint="Seleccione la presentación..."
+                                android:inputType="text"
+                                tools:layout_editor_absoluteY="297dp" />-->
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                app:hintEnabled="false"
+                                app:endIconMode="dropdown_menu"
+                                app:endIconDrawable="@drawable/icono_dropdown"> <!-- Esto habilita el ícono de dropdown -->
+
+
+                                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                                    android:id="@+id/txtEnfermedadEditar"
+                                    android:hint="Seleccione una actividad..."
+                                    style="@style/Style_input"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:clickable="true"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <!-- -->
+
+                        <!-- -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fecha"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                tools:layout_editor_absoluteY="262dp" />
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="136dp"
+                                android:text="Hora"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                tools:layout_editor_absoluteY="262dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/txtFechaGestionSaludEditar"
+                                style="@style/Style_input_medium"
+                                android:hint="@string/text_dd_mm_yyyy"
+                                android:focusable="false"
+                                android:clickable="true" />
+
+                            <EditText
+                                android:id="@+id/txtHoraGestionSaludEditar"
+                                style="@style/Style_input_medium"
+                                android:layout_marginStart="10dp"
+                                android:hint="00:00 am"
+                                android:focusable="false"
+                                android:clickable="true"/>
+                        </LinearLayout>
+                        <!-- -->
+                        <!-- -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginBottom="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Categoria"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="24dp"
+                            android:gravity="center">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                app:hintEnabled="false"
+                                app:endIconMode="dropdown_menu"
+                                app:endIconDrawable="@drawable/icono_dropdown"> <!-- Esto habilita el ícono de dropdown -->
+
+
+                                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                                    android:id="@+id/txtCategoriaGestionSaludEditar"
+                                    android:hint="Seleccione una categoria..."
+                                    style="@style/Style_input"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:clickable="true"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <!-- -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginBottom="16dp">
+
+                            <TextView
+                                android:id="@+id/textView57"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Descripción"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                tools:layout_editor_absoluteY="262dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <EditText
+                                android:id="@+id/txtDescripcionGestionSaludEditar"
+                                style="@style/Style_input_text_area"
+                                android:hint="Ingrese una descripción de la actividad de bienestar (Opcional)"
+                                android:lines="5"
+                                android:inputType="textMultiLine"
+                                android:gravity="top|start"
+                                android:scrollbars="vertical"/>
+                        </LinearLayout>
+                        <!-- -->
+
+                        <LinearLayout
+                            android:id="@+id/btnEditarRecordatorioGestionSalud"
+                            style="@style/Style_button_con_icono"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="32dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="60dp"
+                                android:layout_marginEnd="60dp"
+                                android:layout_marginBottom="5dp"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:text="Guardar recordatorio"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp"
+                                app:drawableStartCompat="@drawable/icono_notificaciones_boton" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:background="#efe5fc"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconSize="28dp"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent">
+
+        <fragment
+            android:id="@+id/fragment_bottom_bar"
+            android:name="com.example.mediplus.BarBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

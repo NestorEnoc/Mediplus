@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    tools:context=".CrearModuloNotasMedicamentos">
+
+    <!-- First layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_layout"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent">
+
+        <fragment
+            android:id="@+id/fragment_container"
+            android:name="com.example.mediplus.BarTopReturn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- ScrollView for scrollable content -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/top_layout"
+        app:layout_constraintBottom_toTopOf="@id/barra_navegacion">
+
+        <!--<ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">-->
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/top_layout"
+            app:layout_constraintBottom_toTopOf="@id/barra_navegacion"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Título de la pantalla -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="206dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Notas de medicamentos"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Texto descriptivo -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/textView120"
+                        android:layout_width="302dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Este es tu listado de notas de medicamentos donde podrás anotar las cosas importantes." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="0.9dp">
+
+                        <EditText
+                            android:id="@+id/txtTituloNotaMedicamento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:paddingBottom="22dp"
+                            android:hint="Titulo de la nota" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnBuscarMedicamentos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="30dp">
+
+                        <!--<LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                app:hintEnabled="false"
+                                app:endIconMode="dropdown_menu"
+                                app:endIconDrawable="@drawable/icono_dropdown">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/txtFiltroMedicamentos"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Seleccione..."
+                                    android:focusable="false"
+                                    android:inputType="none"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>-->
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hintEnabled="false"
+                            app:endIconMode="dropdown_menu"
+                            app:endIconDrawable="@drawable/icono_dropdown">
+
+                            <AutoCompleteTextView
+                                android:background="@android:color/transparent"
+                                android:id="@+id/txtFiltroMedicamentos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Seleccione..."
+                                android:focusable="false"
+                                android:inputType="none"/>
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="1.8dp"
+                                android:background="#929191" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        <!--<com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            app:hintEnabled="false"
+                            app:endIconMode="dropdown_menu"
+                            app:endIconDrawable="@drawable/icono_dropdown">
+
+
+                            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                                android:id="@+id/txtEspecialidadExamenEditar"
+                                android:hint="Seleccione una especialidad..."
+                                style="@style/Style_input"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:clickable="true"/>
+                        </com.google.android.material.textfield.TextInputLayout>-->
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <!-- -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:id="@+id/textView57"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cuerpo de la nota:"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:layout_editor_absoluteY="262dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/recordatorioMedicamentos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp">
+
+                            <EditText
+                                android:id="@+id/txtDescripcionGestionSalud"
+                                style="@style/Style_input_text_area_notas"
+                                android:lines="5"
+                                android:padding="4dp"
+                                android:inputType="textMultiLine"
+                                android:gravity="top|start"
+                                android:scrollbars="vertical"/>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                    <!-- -->
+                    <LinearLayout
+                        android:id="@+id/btnCrearNotaMedicamentos"
+                        style="@style/Style_button_con_icono"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="32dp">
+                        <!-- @+id/btnCrearRecordatorioActividad -->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="80dp"
+                            android:layout_marginEnd="80dp"
+                            android:layout_marginBottom="5dp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:text="Guardar nota"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp"
+                            app:drawableStartCompat="@drawable/icono_guardar" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/barra_navegacion"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent">
+
+        <fragment
+            android:id="@+id/fragment_bottom_bar"
+            android:name="com.example.mediplus.BarBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

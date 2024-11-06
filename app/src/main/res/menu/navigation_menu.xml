@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Sección Recordatorios -->
+    <item
+        android:title=""
+        android:enabled="false"/>
+
+    <item
+        android:id="@+id/tomaMedicamentosMenu"
+        android:icon="@drawable/icono_notificaciones"
+        android:title="Toma de medicamentos" />
+
+    <item
+        android:id="@+id/alertaAbastecimientoMenu"
+        android:icon="@drawable/icono_ver_menu_popup"
+        android:title="Alerta de abastecimiento" />
+
+        <item
+            android:id="@+id/citasMedicasMenu"
+            android:icon="@drawable/icono_calendario_citas"
+            android:title="Citas médicas" />
+
+        <item
+            android:id="@+id/gestionSaludMenu"
+            android:icon="@drawable/icono_gestion_salud"
+            android:title="Gestión de salud" />
+
+        <item
+            android:id="@+id/vidaSaludableMenu"
+            android:icon="@drawable/icono_corazon"
+            android:title="Vida saludable" />
+
+        <!-- Sección Historial -->
+        <item
+            android:title=""
+            android:enabled="false"/>
+
+        <item
+            android:id="@+id/examenesMenu"
+            android:icon="@drawable/icono_examenes"
+            android:title="Exámenes" />
+
+        <item
+            android:id="@+id/historialesMenu"
+            android:icon="@drawable/icono_historiales"
+            android:title="Historiales" />
+
+        <!-- Sección Notas -->
+        <item
+            android:title=""
+            android:enabled="false"/>
+
+        <item
+            android:id="@+id/notasMedicamentosMenu"
+            android:icon="@drawable/icono_notas_medicamentos"
+            android:title="Notas de medicamentos" />
+
+        <item
+            android:id="@+id/otrasNotasMenu"
+            android:icon="@drawable/icono_otras_notas"
+            android:title="Otras notas generales" />
+
+</menu>
+
+
+
+
+

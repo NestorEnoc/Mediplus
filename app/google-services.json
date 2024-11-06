@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "351422169189",
+    "project_id": "mediplus-jns2024",
+    "storage_bucket": "mediplus-jns2024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351422169189:android:3cd19fe6cb53d65711868c",
+        "android_client_info": {
+          "package_name": "com.example.mediplus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz5L_jJ1Z0J0Pl1Zi2suIEuu9gHmAQ34s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

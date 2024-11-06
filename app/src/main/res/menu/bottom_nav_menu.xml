@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btn_inicio"
+        android:icon="@drawable/icono_inicio_bottom_bar"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/btn_medicina"
+        android:icon="@drawable/icono_medicina_bottom_bar"
+        android:title="Medicina" />
+    <item
+        android:id="@+id/nav_citas"
+        android:icon="@drawable/icono_citas_bottom_bar"
+        android:title="Citas" />
+    <item
+        android:id="@+id/nav_examenes"
+        android:icon="@drawable/icono_examenes_modulo"
+        android:title="Examenes" />
+</menu>

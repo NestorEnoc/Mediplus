@@ -1,0 +1,208 @@
+<com.google.android.material.card.MaterialCardView android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="3dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="13dp"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/azul"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_shadow"
+        android:orientation="horizontal"
+        android:padding="9dp">
+
+        <LinearLayout
+            android:layout_marginStart="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="15dp">
+
+                <!-- Primer layout o elemento alineado a la izquierda -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <!-- Contenido del primer layout -->
+                    <TextView
+                        android:id="@+id/txtTituloNotaGeneral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Glicerina"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Segundo layout alineado a la derecha -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/txtFechaNotaGeneral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="19/09/2024"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <!-- Primer Layout con ancho ajustable (layout_weight) -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/topLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/txtHoraNotaGeneral"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:text="07:30 pm"/>
+
+                            </LinearLayout>
+                            <!-- aca-->
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Segundo Layout con ancho wrap_content -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_info_general"
+                            android:layout_width="55dp"
+                            android:layout_height="45dp"
+                            app:cardCornerRadius="16dp"
+                            android:clickable="true"
+                            android:layout_marginEnd="10dp"
+                            android:focusable="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/custom_shadow_button"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="4dp">
+
+                                <ImageView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/icono_alerta_abastecimiento"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+                    <!-- Tercer Layout con ancho wrap_content -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_editar_general"
+                            android:layout_width="55dp"
+                            android:layout_height="45dp"
+                            app:cardCornerRadius="16dp"
+                            android:clickable="true"
+                            android:layout_marginEnd="10dp"
+                            android:focusable="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/custom_shadow_button"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="4dp">
+
+                                <ImageView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/icono_lapiz_editar"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+                    <!-- Cuarto Layout con ancho wrap_content -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_eliminar_general"
+                            android:layout_width="55dp"
+                            android:layout_height="45dp"
+                            app:cardCornerRadius="16dp"
+                            android:clickable="true"
+                            android:layout_marginEnd="15dp"
+                            android:focusable="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/custom_shadow_button"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="4dp">
+
+                                <ImageView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/icono_eliminar_menu_popup"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
